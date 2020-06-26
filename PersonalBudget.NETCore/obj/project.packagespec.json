@@ -1,0 +1,78 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/PersonalBudget.NETCore.csproj",
+    "projectName": "PersonalBudget.NETCore",
+    "projectPath": "/Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/PersonalBudget.NETCore.csproj",
+    "outputPath": "/Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Microsoft.AspNetCore.Cors": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.CodeAnalysis.CSharp.Scripting": {
+          "target": "Package",
+          "version": "[3.7.0-2.final, )"
+        },
+        "Microsoft.Data.Sqlite": {
+          "target": "Package",
+          "version": "[5.0.0-preview.6.20312.4, )"
+        },
+        "NUnit": {
+          "target": "Package",
+          "version": "[3.12.0, )"
+        },
+        "NUnit3TestAdapter": {
+          "target": "Package",
+          "version": "[3.17.0-beta.2, )"
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.3, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+    }
+  }
+}
