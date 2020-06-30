@@ -517,6 +517,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Npgsql/5.0.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "dependencies": {
@@ -2226,6 +2238,26 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Npgsql/5.0.0-alpha1": {
+      "sha512": "klEvKZliai81Cho+0qSUQrW0/G76RnH1U6ICjwckKHS639PvVskT8WmViIBYMcr7f7VF1TDSqKT0A1yz0IxVsw==",
+      "type": "package",
+      "path": "npgsql/5.0.0-alpha1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Npgsql.dll",
+        "lib/net461/Npgsql.xml",
+        "lib/netcoreapp3.0/Npgsql.dll",
+        "lib/netcoreapp3.0/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.5.0.0-alpha1.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
       ]
     },
     "NUnit/3.12.0": {
@@ -5142,7 +5174,8 @@
       "Microsoft.Data.Sqlite >= 5.0.0-preview.6.20312.4",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.17.0-beta.2",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "Npgsql >= 5.0.0-alpha1"
     ]
   },
   "packageFolders": {
@@ -5207,6 +5240,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "Npgsql": {
+            "target": "Package",
+            "version": "[5.0.0-alpha1, )"
           }
         },
         "imports": [
@@ -5227,7 +5264,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
       }
     }
   }

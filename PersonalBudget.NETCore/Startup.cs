@@ -31,6 +31,7 @@ namespace PersonalBudget.NETCore
             
             // Services declared as singleton.
             services.AddSingleton<ITestService, TestService>();
+            services.AddSingleton<IAllAccountsService, AllAccountsService>();
             
             // TODO: FIX POLICY OF ALLOWING ANY METHOD OR HEADER.
             services.AddCors(options =>
@@ -38,7 +39,7 @@ namespace PersonalBudget.NETCore
                 options.AddPolicy("CorsPolicy",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:4200")
+                        builder.AllowAnyOrigin()//WithOrigins("http://localhost:4200")
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     });
@@ -61,8 +62,9 @@ namespace PersonalBudget.NETCore
             app.UseDefaultFiles(); // Serves index.html by default.
             app.UseStaticFiles(); // Files in wwwroot are searched first.
 
-            app.UseRouting();
             app.UseCors("CorsPolicy");
+            app.UseRouting();
+            
             app.UseAuthorization();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

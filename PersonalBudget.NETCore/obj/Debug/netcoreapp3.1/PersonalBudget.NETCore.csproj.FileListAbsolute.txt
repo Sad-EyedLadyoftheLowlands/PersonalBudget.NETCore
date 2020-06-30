@@ -202,3 +202,4 @@
 /Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/obj/Debug/netcoreapp3.1/PersonalBudget.NETCore.dll
 /Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/obj/Debug/netcoreapp3.1/PersonalBudget.NETCore.pdb
 /Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/obj/Debug/netcoreapp3.1/PersonalBudget.NETCore.genruntimeconfig.cache
+/Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/bin/Debug/netcoreapp3.1/Npgsql.dll

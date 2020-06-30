@@ -52,6 +52,10 @@
         "Newtonsoft.Json": {
           "target": "Package",
           "version": "[12.0.3, )"
+        },
+        "Npgsql": {
+          "target": "Package",
+          "version": "[5.0.0-alpha1, )"
         }
       },
       "imports": [
@@ -72,7 +76,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
     }
   }
 }

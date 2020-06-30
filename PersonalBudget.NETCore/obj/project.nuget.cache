@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5xl5528ZuT0SwCMD/SFboOfJa1+BOEqFl5BTsT+gYCslaNydS7zSWzHLTWlJtRCrurFBh4PYkLwZE9xUpQoGWA==",
+  "dgSpecHash": "sN3RkYteXXqiJ9h31Xo7w4m6Qn6WbXJgZVAPwBXN34/wv+p/grW6ELTirKh9vdA3uZg9R91KNhs3dsq83/+y4w==",
   "success": true,
   "projectFilePath": "/Users/dylanbaird/Documents/WebDevelopment/PersonalBudget.NETCore/PersonalBudget.NETCore/PersonalBudget.NETCore.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.win32.registry/4.3.0/microsoft.win32.registry.4.3.0.nupkg.sha512",
     "/Users/dylanbaird/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
     "/Users/dylanbaird/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/dylanbaird/.nuget/packages/npgsql/5.0.0-alpha1/npgsql.5.0.0-alpha1.nupkg.sha512",
     "/Users/dylanbaird/.nuget/packages/nunit/3.12.0/nunit.3.12.0.nupkg.sha512",
     "/Users/dylanbaird/.nuget/packages/nunit3testadapter/3.17.0-beta.2/nunit3testadapter.3.17.0-beta.2.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
