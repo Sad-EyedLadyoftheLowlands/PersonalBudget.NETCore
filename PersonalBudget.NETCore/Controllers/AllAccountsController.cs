@@ -26,5 +26,32 @@ namespace PersonalBudget.NETCore.Controllers
         {
             return new ObjectResult(allAccountsService.GetAllAccounts());
         }
+
+        [HttpGet("{id}")]
+        public ObjectResult Index1(Int64 id)
+        {
+            return new ObjectResult(allAccountsService.GetSpecificAccount(id));
+        }
+        // This might be better off as a PUT request, and so I will simply copy this and test it that way...
+        /*
+        [HttpPatch("{id}")]
+        public ObjectResult UpdateTransaction([FromBody] AllAccounts account)
+        {
+            return new ObjectResult(allAccountsService.UpdateTransaction(account));
+        }
+        */
+        // TESTING AS A PUT REQUEST
+        [HttpPut("{id}")]
+        public ObjectResult UpdateTransaction([FromBody] AllAccounts account)
+        {
+            return new ObjectResult(allAccountsService.UpdateTransaction(account));
+        }
+/*
+        [HttpPost]
+        public ObjectResult CreateTransaction([FromBody] AllAccounts transaction)
+        {
+            return new ObjectResult(allAccountsService.CreateTransaction(transaction));
+        }
+        */
     }
 }

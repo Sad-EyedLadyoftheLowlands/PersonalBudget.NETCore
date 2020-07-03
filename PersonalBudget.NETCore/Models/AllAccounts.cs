@@ -4,6 +4,7 @@ namespace PersonalBudget.NETCore.Models
 {
     public class AllAccounts
     {
+        public Int32 id { get; set; }
         public DateTime date { get; set; }
         public string payee { get; set; }
         public string category { get; set; }
