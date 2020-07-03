@@ -28,7 +28,7 @@ namespace PersonalBudget.NETCore.Controllers
         }
 
         [HttpGet("{id}")]
-        public ObjectResult Index1(Int64 id)
+        public ObjectResult Index1(int id)
         {
             return new ObjectResult(allAccountsService.GetSpecificAccount(id));
         }
@@ -46,12 +46,12 @@ namespace PersonalBudget.NETCore.Controllers
         {
             return new ObjectResult(allAccountsService.UpdateTransaction(account));
         }
-/*
+
         [HttpPost]
-        public ObjectResult CreateTransaction([FromBody] AllAccounts transaction)
+        public ObjectResult CreateTransaction([FromBody] AllAccounts account)
         {
-            return new ObjectResult(allAccountsService.CreateTransaction(transaction));
+            return new ObjectResult(allAccountsService.CreateTransaction(account));
         }
-        */
+        
     }
 }

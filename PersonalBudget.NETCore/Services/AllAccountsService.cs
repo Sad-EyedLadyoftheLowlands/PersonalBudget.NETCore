@@ -10,8 +10,9 @@ namespace PersonalBudget.NETCore.Services
     public interface IAllAccountsService
     {
         List<AllAccounts> GetAllAccounts();
-        AllAccounts GetSpecificAccount(Int64 id);
+        AllAccounts GetSpecificAccount(int id);
         bool UpdateTransaction(AllAccounts account);
+        bool CreateTransaction(AllAccounts account);
     }
     
     public class AllAccountsService : IAllAccountsService
@@ -57,7 +58,7 @@ namespace PersonalBudget.NETCore.Services
             return allAccounts;
         }
 
-        public AllAccounts GetSpecificAccount(Int64 id)
+        public AllAccounts GetSpecificAccount(int id)
         {
             AllAccounts account = new AllAccounts();
             
@@ -119,6 +120,34 @@ namespace PersonalBudget.NETCore.Services
                     transaction.Commit();
                 }
                 return true;
+        }
+
+        public bool CreateTransaction(AllAccounts account)
+        {
+            var cs = "Host=167.114.144.182;Username=dbaird;Password=N3!lY0ng;Database=dylan";
+            using var connection = new NpgsqlConnection(cs);
+            
+            connection.Open();
+
+            using (var transaction = connection.BeginTransaction())
+            {
+                var updateCommand = connection.CreateCommand();
+                updateCommand.Transaction = transaction;
+                updateCommand.CommandText = // everything below is changed, like above to replace $ with @ ??? is this better?
+                    "INSERT INTO allaccountstransactions VALUES (date, payee, category, memo, expense, income, balance, id)";
+                updateCommand.Parameters.AddWithValue("@date", account.date);
+                updateCommand.Parameters.AddWithValue("@payee", account.payee);
+                updateCommand.Parameters.AddWithValue("@category", account.category);
+                updateCommand.Parameters.AddWithValue("@memo", account.memo);
+                updateCommand.Parameters.AddWithValue("@expense", account.expense);
+                updateCommand.Parameters.AddWithValue("@income", account.income);
+                updateCommand.Parameters.AddWithValue("@balance", account.balance);
+                updateCommand.Parameters.AddWithValue("@id", account.id);
+                updateCommand.ExecuteNonQuery();
+                                                    
+                transaction.Commit();
+            }
+            return true;
         }
     }
 }
