@@ -32,15 +32,7 @@ namespace PersonalBudget.NETCore.Controllers
         {
             return new ObjectResult(allAccountsService.GetSpecificAccount(id));
         }
-        // This might be better off as a PUT request, and so I will simply copy this and test it that way...
-        /*
-        [HttpPatch("{id}")]
-        public ObjectResult UpdateTransaction([FromBody] AllAccounts account)
-        {
-            return new ObjectResult(allAccountsService.UpdateTransaction(account));
-        }
-        */
-        // TESTING AS A PUT REQUEST
+      
         [HttpPut("{id}")]
         public ObjectResult UpdateTransaction([FromBody] AllAccounts account)
         {
@@ -52,6 +44,13 @@ namespace PersonalBudget.NETCore.Controllers
         {
             return new ObjectResult(allAccountsService.CreateTransaction(account));
         }
+
+        [HttpDelete("{id}")]
+        public ObjectResult DeleteTransaction(int id)
+        {
+            return new ObjectResult(allAccountsService.DeleteTransaction(id));
+        }
+        
         
     }
 }
